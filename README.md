@@ -1,6 +1,6 @@
 # Django MongoEngine
 
-This package, unlike [Django-MongoEngine](https://github.com/MongoEngine/django-mongoengine) or [Djongo](https://github.com/nesdis/djongo/), doesn't aim on changing SQL role in Django. Writing backend for NoSQL database is very
+This package, unlike [Django-MongoEngine](https://github.com/MongoEngine/django-mongoengine) or [Djongo](https://github.com/nesdis/djongo/), doesn't aim on changing SQL role in Django. Writing backend for NoSQL database is not trivial. Here MongoDB is used as helper database, to increase performance.
 
 
 ## Usage
