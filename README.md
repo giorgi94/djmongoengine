@@ -19,6 +19,8 @@ MONGODB_DATABASES = {
         "host": '127.0.0.1',
         "port": 27017,
         "tz_aware": True,
+        # "username": "user",
+        # "password": "pass"
     },
 }
 

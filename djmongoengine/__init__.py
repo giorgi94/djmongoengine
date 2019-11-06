@@ -1,1 +1,1 @@
-default_app_config = 'djmongoengine.config.DjMongoEngineConfig'
+default_app_config = "djmongoengine.config.DjMongoEngineConfig"

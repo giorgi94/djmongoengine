@@ -1,19 +1,18 @@
+from mongoengine import DynamicDocument, EmbeddedDocument, fields
 
-from mongoengine import Document, StringField, ListField, ReferenceField
 
-class User(Document):
-    meta = {'collection': 'users'}
-    name = StringField()
+class DocumentMixin:
+    @classmethod
+    def UpdateOne(cls, instance):
+        item = cls.objects(ID=instance.id).first()
 
-class Page(Document):
-    meta = {'collection': 'pages'}
-    content = StringField()
-    authors = ListField(ReferenceField(User))
+        if item is None:
+            cls.from_instance(instance).save()
+        else:
+            it = cls.from_instance(instance)
+            it.id = item.id
+            it.save()
 
-'''
-bob = User(name="Bob Jones").save()
-john = User(name="John Smith").save()
-
-Page(content="Test Page", authors=[bob, john]).save()
-Page(content="Another Page", authors=[john]).save()
-'''
+    @classmethod
+    def from_instance(cls, instance):
+        pass
