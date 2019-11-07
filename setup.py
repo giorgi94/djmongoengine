@@ -22,8 +22,5 @@ setup(
         "Pillow>=5.3.0",
         "mongoengine>=0.18.2",
         "pymongo>=3.9.0",
-        "graphene==2.1.8",
-        "graphene-mongo==0.2.8",
-        "Unidecode==1.1.1",
     ],
 )
